@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inovare SaaS - Soluções Digitais Profissionais</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin: 2rem 0 1rem;
+            text-align: center;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem;
+        }
+        
+        .lead {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            text-align: center;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+        }
+        
+        .packages {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .package {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 2rem;
+            width: 100%;
+            max-width: 350px;
+            transition: transform 0.3s ease;
+        }
+        
+        .package:hover {
+            transform: translateY(-10px);
+        }
+        
+        .package.featured {
+            border: 3px solid var(--secondary);
+            position: relative;
+        }
+        
+        .package.featured::before {
+            content: "Mais Popular";
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: var(--secondary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            color: var(--primary);
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .price small {
+            font-size: 1rem;
+            color: #777;
+        }
+        
+        .features {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        
+        .features li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .features li::before {
+            content: "✓";
+            color: #27ae60;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .testimonials {
+            background: var(--light);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .testimonial {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        
+        .contact {
+            background: var(--primary);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .packages {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .package {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Inovare SaaS</h1>
+            <p class="lead">Soluções digitais profissionais para alavancar seu negócio</p>
+            <a href="#contact" class="btn">Fale Conosco</a>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h2>Sua Presença Digital Completa</h2>
+            <p class="lead">Em um mercado cada vez mais digital, estar presente de forma profissional e estratégica na internet deixou de ser um diferencial — é uma necessidade básica.</p>
+            <p>Oferecemos soluções digitais modulares, rápidas de implementar, com custo acessível e alta percepção de valor. Cada serviço foi pensado para resolver uma dor real do dia a dia de quem empreende.</p>
+        </div>
+    </section>
+    
+    <section class="container">
+        <h2>Nossos Pacotes Principais</h2>
+        <p class="lead">Escolha o pacote ideal para o estágio do seu negócio</p>
+        
+        <div class="packages">
+            <div class="package">
+                <h3>Pacote Início Digital</h3>
+                <p>Ideal para quem está começando</p>
+                <div class="price">R$ 790,00 <small>ou R$ 700,00 à vista</small></div>
+                <ul class="features">
+                    <li>Site Institucional (1 página)</li>
+                    <li>E-mail profissional @seudominio.com</li>
+                    <li>Link único (estilo Linktree)</li>
+                    <li>Prazo: até 5 dias úteis</li>
+                </ul>
+                <a href="#contact" class="btn">Quero este pacote</a>
+            </div>
+            
+            <div class="package featured">
+                <h3>Pacote Online Profissional</h3>
+                <p>Presença online completa</p>
+                <div class="price">R$ 1.600,00 <small>ou R$ 1.450,00 à vista</small></div>
+                <ul class="features">
+                    <li>Hospedagem + Domínio + SSL (1 ano)</li>
+                    <li>Site Institucional (até 5 páginas)</li>
+                    <li>Landing Page de Conversão</li>
+                    <li>3 E-mails Profissionais</li>
+                    <li>Crachá Digital com QR Code</li>
+                    <li>Backup e Segurança</li>
+                    <li>Prazo: até 7 dias úteis</li>
+                </ul>
+                <a href="#contact" class="btn">Quero este pacote</a>
+            </div>
+            
+            <div class="package">
+                <h3>Pacote Digital Completo</h3>
+                <p>Transforme sua presença digital</p>
+                <div class="price">R$ 2.200,00 <small>ou R$ 2.000,00 à vista</small></div>
+                <ul class="features">
+                    <li>Tudo do Pacote Online Profissional</li>
+                    <li>Certificado digital (e-CPF ou e-CNPJ)</li>
+                    <li>Catálogo digital ou portfólio online</li>
+                    <li>Formulário inteligente com automações</li>
+                    <li>Integração com WhatsApp Business</li>
+                    <li>Prazo: até 10 dias úteis</li>
+                </ul>
+                <a href="#contact" class="btn">Quero este pacote</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="container">
+        <h2>Serviços Avulsos</h2>
+        <p class="lead">Contrate apenas o que você precisa</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Google Meu Negócio</h3>
+                <p>Cadastro e otimização da ficha da empresa no Google (com fotos, localização, produtos, etc).</p>
+                <p><strong>Valor:</strong> R$ 150 a R$ 400</p>
+                <p><strong>Prazo:</strong> 1 dia</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>Assinatura Eletrônica</h3>
+                <p>Orientação para compra e instalação de certificado digital (e-CPF ou e-CNPJ).</p>
+                <p><strong>Valor:</strong> R$ 100,00 (exclui valor do certificado)</p>
+                <p><strong>Prazo:</strong> 1 dia</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>Página de Link Único</h3>
+                <p>Página simples com os links de redes sociais, catálogo, WhatsApp, YouTube etc.</p>
+                <p><strong>Valor:</strong> R$ 120,00</p>
+                <p><strong>Prazo:</strong> 1 dia</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>Catálogo Digital</h3>
+                <p>Página ou PDF interativo com fotos, preços e formas de contato.</p>
+                <p><strong>Valor:</strong> R$ 250,00</p>
+                <p><strong>Prazo:</strong> 2-3 dias</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>Assinatura de E-mail</h3>
+                <p>Assinatura profissional com nome, função, redes sociais e botão WhatsApp.</p>
+                <p><strong>Valor:</strong> R$ 120,00</p>
+                <p><strong>Prazo:</strong> 1 dia</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>Formulários Inteligentes</h3>
+                <p>Formulários de agendamento, inscrição ou cadastro com integração a planilhas e WhatsApp.</p>
+                <p><strong>Valor:</strong> R$ 150 a R$ 350</p>
+                <p><strong>Prazo:</strong> 1-2 dias</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="container">
+        <h2>Diagnóstico e Consultoria</h2>
+        <p class="lead">Entenda antes de investir com nossos serviços estratégicos</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Diagnóstico Digital Estratégico</h3>
+                <p>Identificação de falhas, oportunidades e plano de ação com base em tecnologia acessível.</p>
+                <p><strong>Valor:</strong> R$ 850,00</p>
+                <p><strong>Prazo:</strong> até 7 dias úteis</p>
+                <a href="#contact" class="btn">Saiba mais</a>
+            </div>
+            
+            <div class="service-card">
+                <h3>Consultoria de Inovação</h3>
+                <p>Transforme processos manuais em rotinas digitais mais simples e eficientes.</p>
+                <p><strong>Valor:</strong> R$ 1.400,00</p>
+                <p><strong>Prazo:</strong> até 10 dias úteis</p>
+                <a href="#contact" class="btn">Saiba mais</a>
+            </div>
+            
+            <div class="service-card">
+                <h3>Starter Analytics</h3>
+                <p>Seu primeiro painel de indicadores. Simples, útil e direto.</p>
+                <p><strong>Valor:</strong> R$ 1.500,00</p>
+                <p><strong>Prazo:</strong> até 10 dias úteis</p>
+                <a href="#contact" class="btn">Saiba mais</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials">
+        <div class="container">
+            <h2>O que nossos clientes dizem</h2>
+            <div class="testimonial">
+                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Cliente satisfeito">
+                <p>"Contratei o Pacote Online Profissional e em poucos dias meu negócio já estava online com um site profissional. O atendimento foi excelente e o resultado superou minhas expectativas!"</p>
+                <p><strong>Ana Claudia</strong><br>Designer de Joias</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p class="lead">Pronto para transformar sua presença digital?</p>
+            
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Serviço de interesse</label>
+                        <select id="service" name="service">
+                            <option value="">Selecione um serviço</option>
+                            <option value="inicio-digital">Pacote Início Digital</option>
+                            <option value="online-profissional">Pacote Online Profissional</option>
+                            <option value="digital-completo">Pacote Digital Completo</option>
+                            <option value="outro">Outro serviço</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="5"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                </form>
+            </div>
+            
+            <div style="margin-top: 2rem;">
+                <p>Ou entre em contato diretamente:</p>
+                <p><strong>Alexandre Kranz</strong><br>
+                (41) 99633-3507<br>
+                contato@inovaresaas.com.br</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>Inovare SaaS - Soluções Digitais Profissionais</p>
+            <p>www.inovaresaas.com.br</p>
+            <p>© 2023 Todos os direitos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>
