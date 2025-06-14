@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoria Digital Estratégica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Transforme seu negócio com tecnologia acessível</h1>
+                    <p class="text-xl mb-6">Soluções práticas e realistas para profissionais liberais, microempresas e empreendedores digitais</p>
+                    <a href="#services" class="bg-white text-purple-600 hover:bg-gray-100 px-6 py-3 rounded-full font-semibold inline-block transition duration-300">Conheça nossos serviços</a>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Digital Transformation" class="rounded-lg shadow-xl floating max-w-md w-full">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Target Audience -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Público-alvo ideal</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 flex items-start">
+                    <div class="bg-purple-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-user-tie text-purple-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg mb-2">Profissionais liberais</h3>
+                        <p class="text-gray-600">Que querem se posicionar digitalmente e otimizar seus processos</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 flex items-start">
+                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-store text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg mb-2">Microempresas e MEIs</h3>
+                        <p class="text-gray-600">Que precisam organizar fluxos de trabalho e entender tecnologia</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 flex items-start">
+                    <div class="bg-green-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-lightbulb text-green-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg mb-2">Novos empreendedores</h3>
+                        <p class="text-gray-600">Que estão começando ou sentem que estão "travados" no digital</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Nossos Serviços</h2>
+            <p class="text-xl text-center mb-12 text-gray-600 max-w-3xl mx-auto">Soluções personalizadas para transformar processos manuais em rotinas digitais eficientes</p>
+            
+            <!-- Strategic Diagnosis Section -->
+            <div class="mb-16">
+                <div class="flex items-center mb-6">
+                    <div class="gradient-bg text-white p-3 rounded-lg mr-4">
+                        <i class="fas fa-search text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">Diagnóstico Estratégico & Inovação Digital</h3>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Digital Diagnosis Card -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                        <div class="gradient-bg p-6 text-white">
+                            <h4 class="text-xl font-bold mb-2">Diagnóstico Digital Estratégico</h4>
+                            <p class="opacity-90">Ideal para quem está começando ou sente que está "travado" no digital</p>
+                        </div>
+                        <div class="p-6">
+                            <ul class="mb-6 space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Análise da presença digital atual</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Avaliação de canais (site, redes, WhatsApp, etc.)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Levantamento de processos internos</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Relatório com recomendações práticas e acessíveis</span>
+                                </li>
+                            </ul>
+                            <div class="border-t border-gray-200 pt-4">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <span class="text-sm text-gray-500">Entregável:</span>
+                                        <p class="font-medium">Relatório PDF + plano de ação técnico</p>
+                                    </div>
+                                    <div>
+                                        <span class="text-sm text-gray-500">Prazo:</span>
+                                        <p class="font-medium">Até 7 dias úteis</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Innovation Consulting Card -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                        <div class="gradient-bg p-6 text-white">
+                            <h4 class="text-xl font-bold mb-2">Consultoria de Inovação e Tecnologia</h4>
+                            <p class="opacity-90">Transforme processos manuais em rotinas digitais mais simples e eficientes</p>
+                        </div>
+                        <div class="p-6">
+                            <ul class="mb-6 space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Tudo do Diagnóstico Digital</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Entrevistas com equipe-chave</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Propostas com ferramentas low-code/no-code</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Roteiro técnico de implantação em etapas</span>
+                                </li>
+                            </ul>
+                            <div class="border-t border-gray-200 pt-4">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <span class="text-sm text-gray-500">Entregável:</span>
+                                        <p class="font-medium">Plano técnico + cronograma de implantação</p>
+                                    </div>
+                                    <div>
+                                        <span class="text-sm text-gray-500">Prazo:</span>
+                                        <p class="font-medium">Até 10 dias úteis</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Data Science Section -->
+            <div>
+                <div class="flex items-center mb-6">
+                    <div class="gradient-bg text-white p-3 rounded-lg mr-4">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">Ciência de Dados para Negócios</h3>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Data Science Intro Card -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                        <div class="gradient-bg p-6 text-white">
+                            <h4 class="text-xl font-bold mb-2">O Que a Ciência de Dados Pode Fazer Pelo Seu Negócio?</h4>
+                            <p class="opacity-90">Entenda como usar seus dados para tomar decisões melhores</p>
+                        </div>
+                        <div class="p-6">
+                            <ul class="mb-6 space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Coleta e análise exploratória de dados</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Criação de visualizações (Dashboards simples)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Mini protótipo funcional (relatório ou automação)</span>
+                                </li>
+                            </ul>
+                            <div class="border-t border-gray-200 pt-4">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <span class="text-sm text-gray-500">Entregável:</span>
+                                        <p class="font-medium">Protótipo + relatório de insights</p>
+                                    </div>
+                                    <div>
+                                        <span class="text-sm text-gray-500">Prazo:</span>
+                                        <p class="font-medium">Até 7 dias úteis</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Starter Analytics Card -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                        <div class="gradient-bg p-6 text-white">
+                            <h4 class="text-xl font-bold mb-2">Starter Analytics</h4>
+                            <p class="opacity-90">Seu primeiro painel de indicadores. Simples, útil e direto.</p>
+                        </div>
+                        <div class="p-6">
+                            <ul class="mb-6 space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Criação de dashboard personalizado</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Integração com planilhas ou formulários</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Treinamento para uso e interpretação</span>
+                                </li>
+                            </ul>
+                            <div class="border-t border-gray-200 pt-4">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <span class="text-sm text-gray-500">Entregável:</span>
+                                        <p class="font-medium">Dashboard + vídeo explicativo</p>
+                                    </div>
+                                    <div>
+                                        <span class="text-sm text-gray-500">Prazo:</span>
+                                        <p class="font-medium">Até 10 dias úteis</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Customer Analysis Card -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                        <div class="gradient-bg p-6 text-white">
+                            <h4 class="text-xl font-bold mb-2">Análise de Clientes & Segmentação</h4>
+                            <p class="opacity-90">Descubra quem é seu melhor cliente e como vender mais para ele</p>
+                        </div>
+                        <div class="p-6">
+                            <ul class="mb-6 space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Análise RFM (Recência, Frequência, Valor)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Identificação de padrões de compra</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Estratégias para retenção e reativação</span>
+                                </li>
+                            </ul>
+                            <div class="border-t border-gray-200 pt-4">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <span class="text-sm text-gray-500">Entregável:</span>
+                                        <p class="font-medium">Relatório com perfis + recomendações</p>
+                                    </div>
+                                    <div>
+                                        <span class="text-sm text-gray-500">Prazo:</span>
+                                        <p class="font-medium">Até 12 dias úteis</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Process Optimization -->
+            <div class="mt-16">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300 max-w-2xl mx-auto">
+                    <div class="gradient-bg p-6 text-white">
+                        <h4 class="text-xl font-bold mb-2">Controle e Otimização de Processos</h4>
+                        <p class="opacity-90">Ganhe tempo, evite retrabalho e visualize tudo em um só lugar</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="mb-6 space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Mapeamento de processos operacionais</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Criação de indicadores de eficiência</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Dashboard com tempo de resposta, produtividade, gargalos</span>
+                            </li>
+                        </ul>
+                        <div class="border-t border-gray-200 pt-4">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-sm text-gray-500">Entregável:</span>
+                                    <p class="font-medium">Mapa de processos + painel visual + plano de melhoria</p>
+                                </div>
+                                <div>
+                                    <span class="text-sm text-gray-500">Prazo:</span>
+                                    <p class="font-medium">Até 15 dias úteis</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentiators -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Nossos Diferenciais</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 rounded-lg bg-gray-50 border border-gray-200">
+                    <div class="gradient-bg text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-comments text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Linguagem Acessível</h3>
+                    <p class="text-gray-600">Diagnóstico técnico sem jargões complicados, explicado de forma clara</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-lg bg-gray-50 border border-gray-200">
+                    <div class="gradient-bg text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-bolt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Soluções Práticas</h3>
+                    <p class="text-gray-600">Recomendações realistas para o seu momento atual de negócio</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-lg bg-gray-50 border border-gray-200">
+                    <div class="gradient-bg text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Implementação Rápida</h3>
+                    <p class="text-gray-600">Alto retorno percebido em pouco tempo</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-lg bg-gray-50 border border-gray-200">
+                    <div class="gradient-bg text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-life-ring text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Suporte Pós-venda</h3>
+                    <p class="text-gray-600">Acompanhamento e possibilidade de evoluir para projetos maiores</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gradient-bg py-16 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Pronto para transformar seu negócio?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Entre em contato e descubra como podemos ajudar você a alcançar seus objetivos com tecnologia acessível</p>
+            <a href="#" class="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold inline-block transition duration-300 text-lg">Agendar Consulta Gratuita</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-2">Consultoria Digital</h3>
+                    <p class="text-gray-400">Soluções estratégicas para o seu crescimento</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Consultoria Digital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
